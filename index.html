@@ -48,8 +48,9 @@
                 </ul>
                 <button id="myBtn">RESULT</button>
             </div>
-            <div class="result">
+            <div id="result-block">
                 <h1 id="result"></h1>
+                <a href="index.html">RELOAD</a>
             </div>
         </div>
     </div>
@@ -80,7 +81,8 @@
             const note = document.querySelector('.value');
             note.style.display = 'none';
 
-            document.getElementById("result").innerHTML = "<span class='success'>CONGRATULATIONS!</span><br>CGPA: "+result;
+            document.querySelector('#result-block').style.display = 'block';
+            document.getElementById("result").innerHTML = "<span class='success'>CONGRATULATIONS!</span>CGPA: "+result;
         }
 
 
