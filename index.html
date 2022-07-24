@@ -9,42 +9,48 @@
 </head>
 <body>
     <div class="box">
+
         <div class="calculator">
-            <ul>
-                <li>
-                    <label for="one">1st Semester</label>
-                    <input type="text" id="one">
-                </li>
-                <li>
-                    <label for="two">2nd Semester</label>
-                    <input type="text" id="two">
-                </li>
-                <li>
-                    <label for="three">3rd Semester</label>
-                    <input type="text" id="three">
-                </li>
-                <li>
-                    <label for="four">4th Semester</label>
-                    <input type="text" id="four">
-                </li>
-                <li>
-                    <label for="five">5th Semester</label>
-                    <input type="text" id="five">
-                </li>
-                <li>
-                    <label for="six">6th Semester</label>
-                    <input type="text" id="six">
-                </li>
-                <li>
-                    <label for="seven">7th Semester</label>
-                    <input type="text" id="seven">
-                </li>
-                <li>
-                    <label for="eight">8th Semester</label>
-                    <input type="text" id="eight">
-                </li>
-            </ul>
-            <button id="myBtn">RESULT</button>
+            <div class="value">
+                <ul>
+                    <li>
+                        <label for="one">1st Semester</label>
+                        <input type="text" id="one">
+                    </li>
+                    <li>
+                        <label for="two">2nd Semester</label>
+                        <input type="text" id="two">
+                    </li>
+                    <li>
+                        <label for="three">3rd Semester</label>
+                        <input type="text" id="three">
+                    </li>
+                    <li>
+                        <label for="four">4th Semester</label>
+                        <input type="text" id="four">
+                    </li>
+                    <li>
+                        <label for="five">5th Semester</label>
+                        <input type="text" id="five">
+                    </li>
+                    <li>
+                        <label for="six">6th Semester</label>
+                        <input type="text" id="six">
+                    </li>
+                    <li>
+                        <label for="seven">7th Semester</label>
+                        <input type="text" id="seven">
+                    </li>
+                    <li>
+                        <label for="eight">8th Semester</label>
+                        <input type="text" id="eight">
+                    </li>
+                </ul>
+                <button id="myBtn">RESULT</button>
+            </div>
+            <div class="result">
+                <h1 id="result"></h1>
+            </div>
         </div>
     </div>
     <script>
@@ -68,7 +74,13 @@
             six =  (20 / 100) * six;
             seven =  (25 / 100) * seven;
             eight =  (15 / 100) * eight;
+            const result = one+two+three+four+five+six+seven+eight;
             console.log(one+two+three+four+five+six+seven+eight);
+
+            const note = document.querySelector('.value');
+            note.style.display = 'none';
+
+            document.getElementById("result").innerHTML = "<span class='success'>CONGRATULATIONS!</span><br>CGPA: "+result;
         }
 
 
